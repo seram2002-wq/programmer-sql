@@ -1,0 +1,8 @@
+-- 코드를 작성해주세요
+select B.ID, B.GENOTYPE, A.GENOTYPE as PARENT_GENOTYPE
+from ECOLI_DATA A
+join ECOLI_DATA B
+on A.ID=B.PARENT_ID
+where (A.GENOTYPE & B.GENOTYPE) =A.GENOTYPE
+order by 1;
+
